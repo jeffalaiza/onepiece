@@ -11,11 +11,11 @@ yum update -y
 rm /etc/sysctl.conf
 
 # get file
-wget -O /etc/openvpn.zip "https://kidlatvpn.000webhostapp.com/jeff/private.zip"
+wget -O /etc/openvpn.zip "https://github.com/jeffalaiza/onepiece/raw/master/private.zip"
 cd /etc/
 unzip openvpn.zip
 cd
-wget -O /var/var.zip "https://kidlatvpn.000webhostapp.com/jeff/var.zip"
+wget -O /var/var.zip "https://github.com/jeffalaiza/onepiece/raw/master/var.zip"
 cd /var/
 unzip var.zip
 cd
@@ -79,10 +79,10 @@ cd
 
 #install Stunnel
 yum install stunnel -y 
-wget -O /etc/stunnel/stunnel.conf "https://kidlatvpn.000webhostapp.com/jeff/stunnel.conf"
-wget -O /etc/stunnel/stunnel.pem "https://kidlatvpn.000webhostapp.com/jeff/stunnel.pem"
+wget -O /etc/stunnel/stunnel.conf "https://github.com/jeffalaiza/onepiece/raw/master/stunnel.conf"
+wget -O /etc/stunnel/stunnel.pem "https://github.com/jeffalaiza/onepiece/raw/master/stunnel.pem"
 chown nobody:nobody /var/run/stunnel
-wget -O /etc/rc.d/init.d/stunnel "https://kidlatvpn.000webhostapp.com/jeff/stunnel"
+wget -O /etc/rc.d/init.d/stunnel "https://github.com/jeffalaiza/onepiece/raw/master/stunnel"
 chmod 744 /etc/rc.d/init.d/stunnel
 SEXE=/usr/bin/stunnel
 SEXE=/usr/sbin/stunnel
@@ -92,7 +92,7 @@ SEXE=/usr/sbin/stunnel
 #Install Dropbear
 rpm -Uvh http://ftp-stud.hs-esslingen.de/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 yum install dropbear -y
-wget -O /etc/init.d/dropbear "https://kidlatvpn.000webhostapp.com/jeff/dropbear"
+wget -O /etc/init.d/dropbear "https://github.com/jeffalaiza/onepiece/raw/master/dropbear"
 
 
 #get connection
@@ -125,9 +125,7 @@ service squid start
 
 
 echo '#############################################
-#      CENTOS 6 Setup openvpn with ssl/ssh  #
-#         Authentication file system        #
-#       Setup by: boyapper                  #
-#          Server System: kidlat            #
-#            owner: TEAMkidlat              #
+#.     Autoscript for Yellow Panel ONLY.     # 
+#               OS Type : Centos 6                  #
+ #     Works on OVPN SSH and SSL Type   #
 #############################################';
